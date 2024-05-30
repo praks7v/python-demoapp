@@ -1,7 +1,7 @@
 {
   "image": "ghcr.io/benc-uk/devcontainers/python:latest",
   "remoteUser": "vscode",
-  "forwardPorts": [5000],
+  "forwardPorts": [5001],
   "extensions": [
     "ms-python.python",
     "mikestead.dotenv",
