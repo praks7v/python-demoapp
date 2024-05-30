@@ -3,7 +3,7 @@ image:
   pullPolicy: Always
 
 service:
-  targetPort: 5000
+  targetPort: 5001
 
 ingress:
   enabled: true
