@@ -1,6 +1,6 @@
 # Used by `image`, `push` & `deploy` targets, override as required
 IMAGE_REG ?= localhost:5000
-IMAGE_REPO ?= http://localhost:5000/python-demoapp
+IMAGE_REPO ?= python-demoapp
 IMAGE_TAG ?= latest
 
 # Used by `deploy` target, sets Azure webap defaults, override as required
