@@ -10,7 +10,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'sudo apt update && sudo apt install make'
+                sh 'apt update && sudo apt install make'
                 sh "make image"
             }
         }
