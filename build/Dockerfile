@@ -3,10 +3,6 @@ FROM python:3.9-slim-buster
 LABEL Name="Python Flask Demo App" Version=1.4.2
 LABEL org.opencontainers.image.source = "https://github.com/praks7v/python-demoapp.git"
 
-
-# Install make and other build dependencies
-RUN apt-get update && apt-get install -y make gcc
-
 ARG srcDir=src
 WORKDIR /app
 COPY $srcDir/requirements.txt .
