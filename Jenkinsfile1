@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'custom_ubuntu'
+            args '-v /var/run/docker.sock:/var/run/docker.sock'
+        }
+    }
 
     stages {
         stage('Git Checkout') {
@@ -10,7 +15,6 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh 'apt update && sudo apt install make'
                 sh "make image"
             }
         }
