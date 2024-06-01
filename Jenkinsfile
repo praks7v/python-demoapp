@@ -8,6 +8,13 @@ pipeline {
             }
         }
         
+        stage('OWASP Scan') {
+            steps {
+                dependencyCheck additionalArguments: '--scan ./' , odcInstallation: 'DC'
+                    dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+            }
+        }
+        
         stage('Build') {
             steps {
                 sh "make image"
